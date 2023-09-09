@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import React from 'react';
 import { StatusBar, SafeAreaView } from 'react-native';
 import useProdutores from './src/hooks/useProdutores';
