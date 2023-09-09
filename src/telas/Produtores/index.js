@@ -6,7 +6,7 @@ import Topo from './componentes/Topo';
 import useProdutores from '../../hooks/useProdutores';
 import useTextos from '../../hooks/useTextos';
 
-export default function Produtores({ melhoresProdutores }) {
+export default function Produtores({ melhoresProdutores = false }) {
   const lista = useProdutores(melhoresProdutores);
   const { tituloProdutores } = useTextos();
 
