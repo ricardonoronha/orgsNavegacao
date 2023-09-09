@@ -17,7 +17,7 @@ export default function AppRotas() {
             tabBarInactiveTintColor: "#C7C7C7",
             tabBarIcon: ({ color }) => {
                 let Icon = HomeSvg;
-                
+
                 if (route.name === "MelhoresProdutores") {
                     Icon = CoracaoSvg;
                 }
