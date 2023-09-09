@@ -4,7 +4,7 @@ import React from "react";
 import { FlatList, StyleSheet, View, Text, Image } from "react-native";
 import useTextos from "../../hooks/useTextos";
 import Topo from "../../componentes/Topo";
-// import { Image } from "react-native-svg";
+// imports
 import topoImg from "../../assets/produtores/topo.png";
 import Cesta from "./componentes/Cesta";
 
