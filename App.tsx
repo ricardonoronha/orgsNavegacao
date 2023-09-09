@@ -5,17 +5,13 @@ import useProdutores from './src/hooks/useProdutores';
 import Home from './src/telas/Home';
 import Cesta from './src/telas/Cesta';
 
-import { NavigationContainer } from '@react-navigation/native';
-import AppRotas from './src/rotas/Rotas';
+import AppRotas from './src/rotas/AppRotas';
 
 export default function App() {
   const produtores = useProdutores(false);
 
-  return <NavigationContainer>
-    <SafeAreaView style={{ flex: 1 }}>
-      <StatusBar />
-      <AppRotas />
-    </SafeAreaView>
-  </NavigationContainer>
-
+  return <SafeAreaView style={{ flex: 1 }}>
+    <StatusBar />
+    <AppRotas />
+  </SafeAreaView>
 }
