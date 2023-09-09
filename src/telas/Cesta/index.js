@@ -7,21 +7,25 @@ import Topo from '../../componentes/Topo';
 import useTextos from '../../hooks/useTextos';
 import Detalhes from './componentes/Detalhes';
 import Item from './componentes/Item';
+import { useRoute } from '@react-navigation/native';
 
-export default function Cesta({ detalhes, itens, produtor }) {
+export default function Cesta() {
   const { topoCesta, tituloItens } = useTextos();
+  const route = useRoute();
+  
+  const { detalhes, itens, produtor } = route.params
 
   return <>
     <FlatList
       data={itens}
       renderItem={Item}
-      keyExtractor={({ nome }) => nome }
+      keyExtractor={({ nome }) => nome}
       ListHeaderComponent={() => {
         return <>
           <Topo titulo={topoCesta} />
           <View style={estilos.cesta}>
             <Detalhes {...detalhes} produtor={produtor} />
-            <Texto style={estilos.titulo}>{ tituloItens }</Texto>
+            <Texto style={estilos.titulo}>{tituloItens}</Texto>
           </View>
         </>
       }}
